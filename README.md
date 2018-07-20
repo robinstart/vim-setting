@@ -13,9 +13,7 @@ sudo apt-get install neovim
 
 #3.install vim-plug
 
-curl -fLo curl ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo curl ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
 #4.clone .init.vim from git
 

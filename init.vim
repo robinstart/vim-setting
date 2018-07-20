@@ -205,6 +205,8 @@ cnoremap jj <ESC>
 " Home key & End key & insert mode moving 
 nnoremap H ^
 nnoremap L $
+vnoremap H ^
+vnoremap L $
 inoremap <c-h> <c-o>h
 inoremap <c-j> <c-o>j
 inoremap <c-k> <c-o>k
