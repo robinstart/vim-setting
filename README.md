@@ -2,6 +2,7 @@
 This is .vimrc or init.vim vim file of Seung Hyun Jeon
 
 #linux###################################################################################
+
 #1.install git
 sudo apt-get install git
 
