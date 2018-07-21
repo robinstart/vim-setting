@@ -3,37 +3,44 @@ This is .vimrc or init.vim vim file of Seung Hyun Jeon
 
 #Ubuntu#############################################################################
 
-#1.install git
 
-sudo apt-get install git
+#1.install neovim
 
-#2.install neovim
+#option 1
 
 sudo add-apt-repository ppa:neovim-ppa/stable 
 
 sudo apt-get update
 
-sudo apt-get install neovim
+sudo apt-get -y install neovim
 
-#3.install vim-plug
+#option 2
 
-sudo apt-get install curl
+curl -fLO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 
-curl -fLo curl ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+chmod u+x nvim.appimage
 
-#4.clone .init.vim from git
+./nvim.appimage
 
-git clone https://github.com/robinstart/vim-setting/init.vim ~/.config/nvim/init.vim
+curl -fLO https://raw.github
 
-#5.PlugInstall
+#2.install vim-plug
+
+sudo apt-get install -y curl
+
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+
+#3.curl .init.vim from git
+
+curl -fLo ~/.config/nvim/init.vim --create-dirs https://raw.githubusercontent.com/robinstart/vim-setting/init.vim
+
+#4.PlugInstall
 
 Type :PlugInstall in command mode 
 
 #windows###################################################################################
 
-1.
-
-#(1)Use window 10 Bash
+#(1)Use windows 10 Bash
 
 #1.download bash
 
@@ -41,13 +48,13 @@ win + R , type control , go to program , Windows I/O , click "linux for window s
 
 go to setting , update and sercurity , developer , click developer mode 
 
-download bash from windows 
+download bash(search: ubuntu) from windows store
 
 #2.use bash like Ubuntu
 
-Similar as Ubuntu , but !!
+#(2)without Bash
 
-curl -fLo curl ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ADD REQUIRE
 
 
 
