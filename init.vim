@@ -30,7 +30,16 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 " git 관련  필수 호환
 Plug 'tpope/vim-fugitive'
-
+Plug 'christophermca/meta5'
+" Theme (colorscheme) 선택 호환
+Plug 'itchyny/lightline.vim'
+	" for Theme (colorscheme)
+	if !has('gui_running')
+		  set t_Co=256
+	  endif
+	colorscheme meta5  
+	set termguicolors
+	
 " vim-airline  필수 호환
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -190,9 +199,6 @@ set bomb
 set binary
 set ttyfast
 
-"테마설정
-colorscheme CodeSchool3
-set termguicolors
 
 "비쥬얼 모드
     "비쥬얼 모드로 tab한 후 계속 유지
