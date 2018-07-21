@@ -17,6 +17,8 @@ sudo apt-get install neovim
 
 #3.install vim-plug
 
+sudo apt-get install curl
+
 curl -fLo curl ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
 #4.clone .init.vim from git
@@ -45,9 +47,9 @@ download bash from windows
 
 Similar as Ubuntu , but !!
 
-curl -fLo curl ~/Local/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo curl ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-git clone https://github.com/robinstart/vim-setting/init.vim ~/Local/nvim/init.vim
+
 
 
 
