@@ -30,15 +30,12 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 " git 관련  필수 호환
 Plug 'tpope/vim-fugitive'
-Plug 'christophermca/meta5'
-" Theme (colorscheme) 선택 호환
+"
+"Themes
+Plug 'NLKNguyen/papercolor-theme'
+
+"vim-airline Themes
 Plug 'itchyny/lightline.vim'
-	" for Theme (colorscheme)
-	if !has('gui_running')
-		  set t_Co=256
-	  endif
-	colorscheme meta5  
-	set termguicolors
 	
 " vim-airline  필수 호환
 Plug 'vim-airline/vim-airline'
@@ -110,11 +107,11 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
+
 "for deoplete
 set runtimepath+=~/.vim/plugged/deoplete.nvim/plugin/deoplete.vim/
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:deoplete#num_processes = 1
+
 "vim-commentary 필수    
 Plug 'tpope/vim-commentary'
 
@@ -138,6 +135,15 @@ call deoplete#enable_logging('DEBUG', '/tmp/deoplete.log')
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 " 다음 줄부터 플러그인이 아닌 내용을 넣으십시오@@@@@@@@@@@@@@@@@@@@@@@@
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+"Theme 
+" colorscheme 
+set background=dark
+colorscheme PaperColor
+if !has('gui_running')
+	  set t_Co=256
+  endif
+set termguicolors
+
 
 "행번호 표시 필수
 set number "왼쪽에 행번호 표시
