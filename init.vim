@@ -7,7 +7,7 @@ if has('vim_starting')
   set nocompatible               " be improved
 endif
 
-let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
 if !filereadable(vimplug_exists)
   if !executable("curl")
@@ -16,7 +16,7 @@ if !filereadable(vimplug_exists)
   endif
   echo "installing vim-plug..."
   echo ""
-  silent !\curl -flo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   let g:not_finish_vimplug = "yes"
 
   autocmd vimenter * pluginstall
@@ -48,7 +48,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
     " for The-NERD-Tree
     "열때 NERDTREE 실행
-    autocmd vimenter * NERDTree
+    " autocmd vimenter * NERDTree
     "NERDTREE만 buffer에 남아있을 때 종료
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     "<c-n>로 NERDTREE 껏다 켠다
@@ -59,6 +59,7 @@ Plug 'scrooloose/nerdtree'
     let NERDTreeShowLineNumbers=1 "NERDTREE에 행 번호 표시 
     let NERDTreeMinimalUI = 1
     let NERDTreeDirArrows = 1 "화살표 모양 바꾸기
+	let g:NERDTreeWinSize=30
 
 "vim-smooth-scroll 선택 호환 
 Plug 'terryma/vim-smooth-scroll'
@@ -196,6 +197,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <F2> <C-w>v<C-w>l
+nnoremap <F3> <C-w>s<C-w>j
+nnoremap <F4> <C-w>c
 
 "encoding 설정
 set enc=utf-8
@@ -241,3 +245,10 @@ augroup vimrc-python
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
+"terminal
+tnoremap jj  <C-\><C-n> 
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+nnoremap <F5> :terminal<CR>
