@@ -6,23 +6,11 @@ This is .vimrc or init.vim vim file of Seung Hyun Jeon
 
 #1.install neovim
 
-#option 1
-
 sudo add-apt-repository ppa:neovim-ppa/stable 
 
 sudo apt-get update
 
 sudo apt-get -y install neovim
-
-#option 2
-
-curl -fLO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
-
-chmod u+x nvim.appimage
-
-./nvim.appimage
-
-curl -fLO https://raw.github
 
 #2.install vim-plug
 
@@ -30,11 +18,17 @@ sudo apt-get install -y curl
 
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
-#3.curl .init.vim from git
+#3. curl .init.vim from git
 
 curl -fLo ~/.config/nvim/init.vim --create-dirs https://raw.githubusercontent.com/robinstart/vim-setting/init.vim
 
-#4.PlugInstall
+#4. install neovim in python
+
+pip install neovim
+
+conda install -c conda-forge neovim 
+
+#5.PlugInstall
 
 Type :PlugInstall in command mode 
 
