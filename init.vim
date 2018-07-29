@@ -232,6 +232,9 @@ cnoremap <c-j> <c-o>j
 cnoremap <c-k> <c-o>k
 cnoremap <c-l> <c-o>l
 
+"uppercase
+nnoremap <leader>u gUw
+
 " c
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
