@@ -118,7 +118,7 @@ let g:deoplete#sources#jedi#server_timeout = 50
 Plug 'tpope/vim-commentary'
 
 "C language
-"deoplete-clang
+"deoplete-clang2
 Plug 'tweekmonster/deoplete-clang2'
 "for deoplete-clang2
 
