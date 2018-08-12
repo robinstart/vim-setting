@@ -112,25 +112,26 @@ let g:deoplete#enable_at_startup = 1
 "for deoplete
 set runtimepath+=~/.vim/plugged/deoplete.nvim/plugin/deoplete.vim/
 let g:deoplete#num_processes = 1
+let g:deoplete#sources#jedi#server_timeout = 50
 
 "vim-commentary 필수    
 Plug 'tpope/vim-commentary'
 
-
-"""end of plugin
-call plug#end()
-filetype plugin indent on
-
+"C language
+"deoplete-clang
+Plug 'tweekmonster/deoplete-clang2'
+"for deoplete-clang2
 
 "python
 "deoplete-jedi
 Plug 'zchee/deoplete-jedi'
 "for deoplete-jedi
 set runtimepath+=~/.vim/plugged/deoplete-jedi/
-call deoplete#custom#source('jedi', 'debug_enabled', 1)
-call deoplete#enable_logging('DEBUG', '/tmp/deoplete.log')
 
 
+"""end of plugin
+call plug#end()
+filetype plugin indent on
 
 
 "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -219,10 +220,6 @@ set ttyfast
 inoremap jj <ESC>
 cnoremap jj <ESC>
 " Home key & End key & insert mode moving 
-nnoremap H ^
-nnoremap L $
-vnoremap H ^
-vnoremap L $
 inoremap <c-h> <c-o>h
 inoremap <c-j> <c-o>j
 inoremap <c-k> <c-o>k
