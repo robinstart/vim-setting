@@ -176,7 +176,7 @@ set mousemodel=popup
 
 "tab키 4로 고정 선택
 set tabstop=4
-set softtabstop=0 
+set softtabstop=4
 set shiftwidth=4
 set expandtab "tab을 _로 구성한다
 
