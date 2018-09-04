@@ -95,9 +95,11 @@ Plug 'scrooloose/syntastic'
     set statusline+=%*
 
     let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
+    let g:syntastic_auto_loc_list = 2
+    let g:syntastic_check_on_open = 0
     let g:syntastic_check_on_wq = 0
+	"let g:syntastic_quiet_messages = { "type": "style" }
+	let g:syntastic_auto_jump = 2
 
 "deoplete 필수
 if has('nvim')
@@ -215,26 +217,29 @@ set ttyfast
     "비쥬얼 모드로 tab한 후 계속 유지
     vmap < <gv
     vmap > >gv
+
 "key mapping 
 "<ESC>
 inoremap jj <ESC>
 cnoremap jj <ESC>
-" Home key & End key & insert mode moving 
-inoremap <c-h> <c-o>h
-inoremap <c-j> <c-o>j
-inoremap <c-k> <c-o>k
-inoremap <c-l> <c-o>l
-cnoremap <c-h> <c-o>h
-cnoremap <c-j> <c-o>j
-cnoremap <c-k> <c-o>k
-cnoremap <c-l> <c-o>l
 
-"uppercase
-nnoremap <leader>u gUw
+" Home key & End key & insert mode moving 
+inoremap <c-h> <left>
+inoremap <c-j> <down>
+inoremap <c-k> <up>
+inoremap <c-l> <right>
+cnoremap <c-h> <left>
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
+cnoremap <c-l> <right>
+
+"find ( and )
+nnoremap ( f(
+nnoremap ) f)
 
 " c
-autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab softtabstop=4
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab softtabstop=4
 
 
 " python
