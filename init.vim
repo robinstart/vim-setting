@@ -233,10 +233,6 @@ cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 
-"find ( and )
-nnoremap ( f(
-nnoremap ) f)
-
 " c
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab softtabstop=4
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab softtabstop=4
